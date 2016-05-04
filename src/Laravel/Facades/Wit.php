@@ -1,4 +1,5 @@
 <?php
+
 namespace Irazasyed\Wit\Laravel\Facades;
 
 use Illuminate\Support\Facades\Facade;

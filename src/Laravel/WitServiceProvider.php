@@ -2,11 +2,11 @@
 
 namespace Irazasyed\Wit\Laravel;
 
-use Irazasyed\Wit\Wit;
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Container\Container as Application;
-use Laravel\Lumen\Application as LumenApplication;
 use Illuminate\Foundation\Application as LaravelApplication;
+use Illuminate\Support\ServiceProvider;
+use Irazasyed\Wit\Wit;
+use Laravel\Lumen\Application as LumenApplication;
 
 class WitServiceProvider extends ServiceProvider
 {

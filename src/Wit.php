@@ -8,9 +8,7 @@ use GuzzleHttp\Promise\PromiseInterface;
 use GuzzleHttp\RequestOptions as GuzzleRequestOptions;
 
 /**
- * Class Wit
- *
- * @package Irazasyed\Wit
+ * Class Wit.
  */
 class Wit
 {
@@ -20,7 +18,7 @@ class Wit
     const VERSION = '0.1.0';
 
     /**
-     * Wit.ai API Base URI
+     * Wit.ai API Base URI.
      */
     const WIT_API_BASE_URI = 'https://api.wit.ai/';
 
@@ -91,8 +89,8 @@ class Wit
         $this->access_token = $access_token;
         $this->isAsyncRequest = $isAsyncRequest;
         $this->client = $httpClient ?: new Client([
-            'base_uri' => self::WIT_API_BASE_URI,
-            'timeout' => self::DEFAULT_TIMEOUT,
+            'base_uri'        => self::WIT_API_BASE_URI,
+            'timeout'         => self::DEFAULT_TIMEOUT,
             'connect_timeout' => self::DEFAULT_TIMEOUT,
         ]);
     }
@@ -180,7 +178,7 @@ class Wit
      */
     public function getIntentBySpeech($q, $params = [])
     {
-//        $this->setHeaders(['Content-type' => 'audio/wav']);
+        //        $this->setHeaders(['Content-type' => 'audio/wav']);
 //
 //        $query = array_merge(compact('q'), $params);
 //
@@ -218,9 +216,9 @@ class Wit
     protected function getDefaultHeaders()
     {
         return array_merge([
-            'User-Agent' => 'php-witai-'.self::VERSION,
+            'User-Agent'    => 'php-witai-'.self::VERSION,
             'Authorization' => 'Bearer '.$this->access_token,
-            'Accept' => 'application/vnd.wit.'.self::WIT_API_VERSION.'+json',
+            'Accept'        => 'application/vnd.wit.'.self::WIT_API_VERSION.'+json',
         ], $this->headers);
     }
 
